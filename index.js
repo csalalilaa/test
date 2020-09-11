@@ -24,7 +24,7 @@ bot.on("ready", () => {
 });
 
 bot.on("message", message => {
-    if (message.channel.id === "Channel_ID") { //This will make the bot work only in that channel
+    if (message.channel.id === "753923793025761352") { //This will make the bot work only in that channel
         if (message.author.bot) return;
             var command = message.content
             .toLowerCase()
@@ -32,7 +32,7 @@ bot.on("message", message => {
             .split(" ")[0];
 
     if (command === "test") {
-        message.channel.send("Test done, bot is working");
+        message.channel.send("finished the test, the bot's working!");
         }
 
     if (command === "gen") {
@@ -58,21 +58,21 @@ bot.on("message", message => {
                             data = data.substr(position + 1);
                             fs.writeFile(filePath, data, function (err) {
                                 const embed = {
-                                    title: "Account Generated!",
-                                    description: "Check your dm for the account's information!",
+                                    title: ".",
+                                    description: "Please check your DMs for the account.",
                                     color: 8519796,
                                     timestamp: "2019-04-04T14:16:26.398Z",
                                     footer: {
                                         icon_url:
-                                            "https://cdn.discordapp.com/avatars/530778425540083723/7a05e4dd16825d47b6cdfb02b92d26a5.png",
-                                        text: "Buy discord bots from Silvano#8106"
+                                            "https://i.pinimg.com/originals/cb/c3/1b/cbc31bce72395ef15d499c784447d0a1.png",
+                                        text: "If the specified account does not work, reroll."
                                     },
                                     thumbnail: {
                                         url:
-                                            "http://www.compartosanita.it/wp-content/uploads/2019/02/right.png"
+                                            "https://pbs.twimg.com/media/DK4RDCNVYAEo-B2.png"
                                     },
                                     author: {
-                                        name: "Account Generator",
+                                        name: "The account has been generated.",
                                         url: "https://discordapp.com",
                                         icon_url: bot.displayAvatarURL
                                     },
@@ -95,7 +95,7 @@ bot.on("message", message => {
                         }
                     } else {
                         message.channel.send(
-                            "Sorry, that service doesn't exists on our database"
+                            "We've either ran out of the service specified or we're just broke. Sorry!"
                         );
                     }
                 });
@@ -157,4 +157,4 @@ bot.on("message", message => {
     }
 });
 
-bot.login("Token");
+bot.login("NzU0MDA0ODQzNTUwNzM2NTY4.X1ubuw.oGtmN-tnYId8t2gLhyBbR11zBuA");
